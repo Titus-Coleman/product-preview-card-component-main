@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Fraunces);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+} 
+
+html, body {
+    height: 100%;
+  }
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+body {
+    display: grid;
+    background-color: hsl(30, 38%, 92%);
+    place-content: center;
+    margin: 1rem;
+
+} 
+
+.flex-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    font-family: 'Fraunces', 'Arial Narrow', Arial;
+    margin: 1rem 0 1rem 0;
+    
+    
+}
+
+.product__sale-price {
+    color: hsl(158, 36%, 37%);
+    font-size: xx-large;
+    font-weight: 500;
+    
+}
+
+.product__msrp {
+    text-decoration: line-through;
+}
+
+
+.product {
+    display: grid;
+    color: hsl(228, 12%, 48%);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 600px;
+    
+   
+}
+
+@media (min-width: 600px) {
+    .product { 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.product__details {
+    display: grid;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Montserrat', Arial;
+    padding: 1rem;
+}
+
+.product__category {
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+}
+
+.product__title {
+    font-family: 'Fraunces', Arial;
+    color: hsl(212, 21%, 14%);
+    font-size: 2rem;
+    font-weight: bold;
+    font-weight: 700;
+    padding: 1;
+}
+
+
+.button {
+    display: inline-flex;
+    padding: 1rem;
+    background-color: hsl(158, 36%, 37%);
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button[data-icon="shopping-cart"]::before {
+    content: "";
+    width: 15px;
+    height: 16px;
+    background-image: url(images/icon-cart.svg);
+}
+
+.button:is(:hover, :focus){
+    background-color: hsl(158, 36%, 30%);
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
